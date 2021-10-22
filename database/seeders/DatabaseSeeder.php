@@ -17,108 +17,77 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // User::create([
+        //     'name' => 'Ferri Syamsul M',
+        //     'email' => '193040145.ferry@mail.unpas.ac.id',
+        //     'password' => bcrypt('12345')
+        // ]);
 
-        User::create([
-            'name' => 'Ferri Syamsul M',
-            'email' => '193040145.ferry@mail.unpas.ac.id',
-            'password' => bcrypt('12345')
-        ]);
+        // User::create([
+        //     'name' => 'Denggol;',
+        //     'email' => 'Denggol@mail.unpas.ac.id',
+        //     'password' => bcrypt('12345')
+        // ]);
 
-        User::create([
-            'name' => 'Denggo;',
-            'email' => 'Denggol@mail.unpas.ac.id',
-            'password' => bcrypt('12345')
+        // User::create([
+        //     'name' => 'Sutijem;',
+        //     'email' => 'sutijem@mail.unpas.ac.id',
+        //     'password' => bcrypt('12345')
+        // ]);
+
+        User::factory(3)->create();
+
+        Category::create([
+            'name' => 'Web Programming',
+            'slug' => 'web-programming'
         ]);
 
         Category::create([
-            'name' => 'Web Programing',
-            'slug' => 'web-programing'
+            'name' => 'Web Design',
+            'slug' => 'web-design'
         ]);
 
-        Category::create([
-            'name' => 'Personal',
-            'slug' => 'personal'
-        ]);
+        // Category::create([
+        //     'name' => 'Personal',
+        //     'slug' => 'personal'
+        // ]);
 
-        Post::create([
-            'title' => 'Judul Pertama',
-            'slug' => 'judul-pertama',
-            'excerpt' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Velit soluta maxime, maiores, magnam tempore porro ullam iusto eum',
-            'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Velit soluta maxime, maiores, magnam tempore porro ullam iusto eum id 
-            esse eligendi inventore quod quia dicta aliquam non officiis in accusamus 
-            corrupti odit expedita, repudiandae quae! Eveniet vel non eligendi, nesciunt 
-            libero earum in repellendus iusto, nihil, velit ducimus perspiciatis 
-            expedita at temporibus aliquam. Aliquid nobis quo dicta voluptatibus 
-            debitis accusamus inventore fugit est. Dolorem maxime hic libero, qui 
-            at molestias architecto nemo itaque autem recusandae optio molestiae 
-            veniam doloremque blanditiis earum placeat dicta quidem laboriosam magni, 
-            deleniti cum illo, reiciendis dolor. Ducimus ipsum vitae esse maiores aut, 
-            odio at exercitationem.',
-            'category-id' => 1,
-            'user_id' => 1
-        ]);
+        Post::factory(20)->create();
 
-        Post::create([
-            'title' => 'Judul Ke Dua',
-            'slug' => 'judul-ke-dua',
-            'excerpt' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Velit soluta maxime, maiores, magnam tempore porro ullam iusto eum',
-            'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Velit soluta maxime, maiores, magnam tempore porro ullam iusto eum id 
-            esse eligendi inventore quod quia dicta aliquam non officiis in accusamus 
-            corrupti odit expedita, repudiandae quae! Eveniet vel non eligendi, nesciunt 
-            libero earum in repellendus iusto, nihil, velit ducimus perspiciatis 
-            expedita at temporibus aliquam. Aliquid nobis quo dicta voluptatibus 
-            debitis accusamus inventore fugit est. Dolorem maxime hic libero, qui 
-            at molestias architecto nemo itaque autem recusandae optio molestiae 
-            veniam doloremque blanditiis earum placeat dicta quidem laboriosam magni, 
-            deleniti cum illo, reiciendis dolor. Ducimus ipsum vitae esse maiores aut, 
-            odio at exercitationem.',
-            'category-id' => 1,
-            'user_id' => 1
-        ]);
+        // Post::create([
+        //     'title' => 'Judul Pertama',
+        //     'slug' => 'judul-pertama',
+        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe eaque odio magnam fugiat ex quos possimus quidem quas autem, perferendis veniam!',
+        //     'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe eaque odio magnam fugiat ex quos possimus quidem quas autem, perferendis veniam! Praesentium earum magnam est quas id, perspiciatis maiores sapiente molestiae delectus voluptates aliquid, quo distinctio eos culpa doloribus suscipit? Eveniet, officiis. Aspernatur voluptatum atque sint quaerat commodi accusamus laborum suscipit molestias, architecto earum soluta neque eaque quisquam id, eveniet ad voluptatem ipsa, inventore placeat! Ducimus dolorem cumque eum consectetur aut. Totam dignissimos numquam animi, dolores aliquid dolorum. Facilis enim quis inventore nobis laudantium cumque quisquam dolorem eveniet dolorum reiciendis aliquam, quam suscipit a totam rem mollitia veniam sunt?',
+        //     'category_id' => 1,
+        //     'user_id' => 1
+        // ]);
 
-        Post::create([
-            'title' => 'Judul Ke Tiga',
-            'slug' => 'judul-ke-tiga',
-            'excerpt' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Velit soluta maxime, maiores, magnam tempore porro ullam iusto eum',
-            'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Velit soluta maxime, maiores, magnam tempore porro ullam iusto eum id 
-            esse eligendi inventore quod quia dicta aliquam non officiis in accusamus 
-            corrupti odit expedita, repudiandae quae! Eveniet vel non eligendi, nesciunt 
-            libero earum in repellendus iusto, nihil, velit ducimus perspiciatis 
-            expedita at temporibus aliquam. Aliquid nobis quo dicta voluptatibus 
-            debitis accusamus inventore fugit est. Dolorem maxime hic libero, qui 
-            at molestias architecto nemo itaque autem recusandae optio molestiae 
-            veniam doloremque blanditiis earum placeat dicta quidem laboriosam magni, 
-            deleniti cum illo, reiciendis dolor. Ducimus ipsum vitae esse maiores aut, 
-            odio at exercitationem.',
-            'category-id' => 2,
-            'user_id' => 1
-        ]);
+        // Post::create([
+        //     'title' => 'Judul ke Dua',
+        //     'slug' => 'judul-ke-dua',
+        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe eaque odio magnam fugiat ex quos possimus quidem quas autem, perferendis veniam!',
+        //     'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe eaque odio magnam fugiat ex quos possimus quidem quas autem, perferendis veniam! Praesentium earum magnam est quas id, perspiciatis maiores sapiente molestiae delectus voluptates aliquid, quo distinctio eos culpa doloribus suscipit? Eveniet, officiis. Aspernatur voluptatum atque sint quaerat commodi accusamus laborum suscipit molestias, architecto earum soluta neque eaque quisquam id, eveniet ad voluptatem ipsa, inventore placeat! Ducimus dolorem cumque eum consectetur aut. Totam dignissimos numquam animi, dolores aliquid dolorum. Facilis enim quis inventore nobis laudantium cumque quisquam dolorem eveniet dolorum reiciendis aliquam, quam suscipit a totam rem mollitia veniam sunt?',
+        //     'category_id' => 1,
+        //     'user_id' => 1
+        // ]);
 
-        Post::create([
-            'title' => 'Judul Ke Empat',
-            'slug' => 'judul-ke-empat',
-            'excerpt' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Velit soluta maxime, maiores, magnam tempore porro ullam iusto eum',
-            'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Velit soluta maxime, maiores, magnam tempore porro ullam iusto eum id 
-            esse eligendi inventore quod quia dicta aliquam non officiis in accusamus 
-            corrupti odit expedita, repudiandae quae! Eveniet vel non eligendi, nesciunt 
-            libero earum in repellendus iusto, nihil, velit ducimus perspiciatis 
-            expedita at temporibus aliquam. Aliquid nobis quo dicta voluptatibus 
-            debitis accusamus inventore fugit est. Dolorem maxime hic libero, qui 
-            at molestias architecto nemo itaque autem recusandae optio molestiae 
-            veniam doloremque blanditiis earum placeat dicta quidem laboriosam magni, 
-            deleniti cum illo, reiciendis dolor. Ducimus ipsum vitae esse maiores aut, 
-            odio at exercitationem.',
-            'category-id' => 2,
-            'user_id' => 2
-        ]);
+        // Post::create([
+        //     'title' => 'Judul ke Tiga',
+        //     'slug' => 'judul-ke-tiga',
+        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe eaque odio magnam fugiat ex quos possimus quidem quas autem, perferendis veniam!',
+        //     'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe eaque odio magnam fugiat ex quos possimus quidem quas autem, perferendis veniam! Praesentium earum magnam est quas id, perspiciatis maiores sapiente molestiae delectus voluptates aliquid, quo distinctio eos culpa doloribus suscipit? Eveniet, officiis. Aspernatur voluptatum atque sint quaerat commodi accusamus laborum suscipit molestias, architecto earum soluta neque eaque quisquam id, eveniet ad voluptatem ipsa, inventore placeat! Ducimus dolorem cumque eum consectetur aut. Totam dignissimos numquam animi, dolores aliquid dolorum. Facilis enim quis inventore nobis laudantium cumque quisquam dolorem eveniet dolorum reiciendis aliquam, quam suscipit a totam rem mollitia veniam sunt?',
+        //     'category_id' => 2,
+        //     'user_id' => 1
+        // ]);
+
+        // Post::create([
+        //     'title' => 'Judul ke Empat',
+        //     'slug' => 'judul-ke-empat',
+        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe eaque odio magnam fugiat ex quos possimus quidem quas autem, perferendis veniam!',
+        //     'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe eaque odio magnam fugiat ex quos possimus quidem quas autem, perferendis veniam! Praesentium earum magnam est quas id, perspiciatis maiores sapiente molestiae delectus voluptates aliquid, quo distinctio eos culpa doloribus suscipit? Eveniet, officiis. Aspernatur voluptatum atque sint quaerat commodi accusamus laborum suscipit molestias, architecto earum soluta neque eaque quisquam id, eveniet ad voluptatem ipsa, inventore placeat! Ducimus dolorem cumque eum consectetur aut. Totam dignissimos numquam animi, dolores aliquid dolorum. Facilis enim quis inventore nobis laudantium cumque quisquam dolorem eveniet dolorum reiciendis aliquam, quam suscipit a totam rem mollitia veniam sunt?',
+        //     'category_id' => 2,
+        //     'user_id' => 2
+        // ]);
     }
 }
